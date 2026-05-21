@@ -63,11 +63,35 @@ function functionName(): never {}
 ---
 
 ## 🔹 Enums in TypeScript
+
 Enum ek special datatype hai jo fixed named values ka group banata hai. ✅
 
 🧩 Syntax
 enum EnumName {
-   value1,
-   value2,
-   value3
+value1,
+value2,
+value3
 }
+
+---
+
+## 🔹 Type Inference in TypeScript
+
+Type Inference ka matlab hai TypeScript automatically variable ka datatype samajh leta hai. ✅
+. Matlab hume type likhne ki zarurat nahi padti.
+🧩 Example
+let name = "Rupesh";
+
+---
+
+## 🔹 Union in TypeScript
+Union ka matlab hai ek variable me ek se jyada datatypes allow karna. ✅
+
+🧩 Syntax
+let variable: type1 | type2;
+
+---
+
+
+
+
