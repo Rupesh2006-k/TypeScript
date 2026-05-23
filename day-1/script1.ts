@@ -41,3 +41,6 @@ enum Direction {
 
 console.log(Direction.left);
 console.log(Direction.right);
+
+
+// 52:00 

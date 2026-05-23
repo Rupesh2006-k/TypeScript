@@ -93,5 +93,149 @@ let variable: type1 | type2;
 ---
 
 
+## Type Inference in TypeScript
 
+Type Inference is a feature in TypeScript where the compiler automatically detects the data type of a variable based on its value, without explicitly defining the type.
 
+Example
+let name = "Rupesh";
+
+👉 TypeScript automatically infers name as string
+---
+
+## Union Type in TypeScript 
+Union Type ka matlab hai ki ek variable multiple types hold kar sakta hai.
+👉 Isme | (pipe operator) use hota hai.
+Example
+let id: string | number;
+id = 101;
+id = "TS101";
+👉 Yaha id ya to number ho sakta hai ya string
+
+---
+
+ ## Intersection Type in TypeScript
+
+Intersection Type ka matlab hai ki hum multiple types ko combine karke ek naya type banate hain, jisme sabhi types ke properties honge.
+
+👉 Isme & (AND operator) use hota hai
+
+Basic Example
+type Person = {
+  name: string;
+};
+
+type Employee = {
+  empId: number;
+};
+
+type Staff = Person & Employee;
+
+let user: Staff = {
+  name: "Rupesh",
+  empId: 101
+};
+
+👉 Staff me Person + Employee dono ke properties aagaye
+
+---
+## Type Aliases
+Type Alias ka matlab hai kisi type ko ek custom naam dena, taaki usse baar-baar reuse kiya ja sake.
+
+👉 type keyword use hota hai
+
+Example
+type User = {
+  name: string;
+  age: number;
+};
+
+let user1: User = {
+  name: "Rupesh",
+  age: 21
+};
+
+👉 Ab baar-baar object type likhne ki zarurat nahi
+--
+## Class
+
+> **Class** ek blueprint hoti hai jisse hum objects banate hain. Isme properties (data) aur methods (functions) define hote hain.
+> 
+
+---
+
+## Basic Syntax
+
+```tsx
+class ClassName {
+  property:type;
+  constructor(value:type) {
+   this.property=value;
+  }
+  method() {
+// logic
+  }
+}
+```
+
+## Access Specifers
+
+### 1️⃣ Public
+
+> **Public** members class ke andar bhi use ho sakte hain aur class ke bahar bhi access kiye ja sakte hain using object (instance).
+> 
+
+---
+
+### 2️⃣ Private
+
+> **Private** members sirf class ke andar hi access ho sakte hain. Unhe class ke bahar directly access nahi kiya ja sakta.
+> 
+
+---
+
+### 3️⃣ Protected
+
+> **Protected** matlab class ke andar use ho sakta hai aur uski **child class (inheritance)** me bhi access ho sakta hai, lekin class ke bahar direct access nahi kar sakte.
+> 
+
+---
+
+# `super` Keyword
+
+> **`super`** ka use parent (base) class ke constructor ya methods ko call karne ke liye hota hai.
+>
+
+✅ Example 
+```tsx 
+
+class PenDrive {
+  private price: number;
+  protected byDate: number;
+
+  constructor(a: number, byDate: number) {
+    this.price = a;
+    this.byDate = byDate;
+  }
+
+  getter() {
+    console.log("the price is : ", this.price);
+  }
+}
+
+class PendDriveUser extends PenDrive {
+  private name: string;
+  private age: number;
+
+  constructor(name: string, age: number, price: number, byDate: number) {
+    super(price, byDate); // ✅ parent constructor call
+
+    this.name = name;
+    this.age = age;
+  }
+
+  show() {
+    console.log(this.byDate); // ✅ protected access allowed
+  }
+}
+```

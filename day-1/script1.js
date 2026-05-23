@@ -27,10 +27,5 @@
 //   console.log("check void");
 // }
 // console.log(typeVoidCheck());
-var Direction;
-(function (Direction) {
-    Direction["left"] = "LEFT";
-    Direction["right"] = "RIGHT";
-})(Direction || (Direction = {}));
-console.log(Direction.left);
-console.log(Direction.right);
+
+
