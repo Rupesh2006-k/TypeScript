@@ -19,7 +19,10 @@ Tuple ek special array hota hai jisme values ka datatype aur order fixed hota ha
 ## syntax:-
 
 🧩 Tuple Syntax in TypeScript
+
+```tsx
 let variableName: [datatype1, datatype2] = [value1, value2];
+```
 
 ---
 
@@ -64,7 +67,9 @@ function functionName(): void {}
 
 never un functions ke liye use hota hai jo kabhi bhi complete nahi hote ya kuch return nahi karte. ✅
 🧩 Syntax
+```tsx
 function functionName(): never {}
+```
 
 ---
 
@@ -267,7 +272,7 @@ class PendDriveUser extends PenDrive {
 
 ---
 
-readonly, Getter & Setter in TypeScript (Hinglish)
+## readonly, Getter & Setter in TypeScript 
 🔹 1. readonly
 Definition
 
@@ -332,3 +337,18 @@ let u = new User();
 u.setName = "Rupesh"; // ✅ set value
 console.log(u.getName);
 ```
+
+---
+
+# Type Assertion in TypeScript
+
+> **Type Assertion** ka use tab hota hai jab hum TypeScript ko manually batate hain ki kisi value ka type kya hai, jab compiler khud sure nahi hota.
+
+### 🔹 Example (DOM)
+
+```tsx
+let input = document.getElementById("username") as HTMLInputElement;
+input.value = "Rupesh";
+```
+
+👉 TS ko nahi pata hota element ka type → hum manually batate hain
