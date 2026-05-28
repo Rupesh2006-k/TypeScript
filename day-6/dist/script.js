@@ -56,6 +56,35 @@ class User {
 }
 let u1 = new User("rupesh");
 u1.value = "j";
-console.log(u1.value);
+// static members
+class Music {
+    static category = "Entertainment";
+}
+class AskWellBing {
+    static sayMorning = "Good morning sir";
+    static sayAfternoon = "Good Afternoon sir";
+    static sayEvening = "Good Evening sir";
+}
+// console.log(AskWellBing.sayMorning); // ✅
+// console.log(AskWellBing.sayAfternoon); // ✅
+// console.log(AskWellBing.sayEvening); // ✅
+// Abstact classes
+class Vehicle {
+    name;
+    constructor(name) {
+        this.name = name;
+    }
+    stop() {
+        console.log(this.name + " stopped"); // normal method
+    }
+}
+class Car extends Vehicle {
+    start() {
+        console.log(this.name + " started with key");
+    }
+}
+let c1 = new Car("BMW");
+c1.start(); // BMW started with key
+c1.stop(); // BMW stopped
 export {};
 //# sourceMappingURL=script.js.map

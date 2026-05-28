@@ -41,3 +41,6 @@ Classes and Objects
 •Getters and setters
 •Static membersl
 •Abstract classes and methods -->
+
+
+<!-- functions -->
