@@ -44,3 +44,11 @@ Classes and Objects
 
 
 <!-- functions -->
+
+<!-- generics
+
+generics functions
+generics interfaces
+generics classes
+
+ -->
