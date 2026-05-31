@@ -352,3 +352,50 @@ input.value = "Rupesh";
 ```
 
 👉 TS ko nahi pata hota element ka type → hum manually batate hain
+
+---
+# 📘**Generic function :-**
+
+👉 **Generic function wo function hota hai jo different data types ke saath kaam kar sakta hai without type loss, using a type parameter (like `<T>`).**
+
+# 📌 Basic Example
+
+```tsx
+function check<T>(value:T):T {
+return value;
+}
+
+console.log(check("Hello"));// string
+console.log(check(10));// number
+```
+
+---
+
+## ⚡ Generic interface :-
+
+👉 **Generic interface ek aisa interface hota hai jo type parameter (`<T>`) use karke multiple data types ke saath reusable banaya jata hai.**
+
+## 💥 Pro Tip
+
+- `<T>` naam kuch bhi ho sakta hai (`<Type>`, `<Data>`)
+- Multiple generics use karna zyada practical hota hai
+
+## 🚀  Generic Interface example
+
+```tsx
+interface Human<T> {
+  name: T,
+  age: T,
+  gender: T
+}
+
+function genInf<T>(arg: Human<T>) {
+  console.log(arg);
+}
+
+genInf({
+  name: "Rupesh",
+  age: 12,
+  gender: "male"
+});
+```

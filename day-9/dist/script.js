@@ -50,6 +50,13 @@ const maleObj = {
     }
 };
 // function calls
-human(maleObj);
+// human(maleObj);
+// generics
+function generics(data) {
+    console.log(data);
+}
+generics("hey");
+generics(12);
+generics(true);
 export {};
 //# sourceMappingURL=script.js.map

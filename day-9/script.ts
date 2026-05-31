@@ -131,11 +131,18 @@ const maleObj: Male = {
     }
 };
 // function calls
-human(maleObj);
+// human(maleObj);
 
 
+// generics
 
+function generics<Type>(data:Type){
+    console.log(data);
+}
 
+generics("hey")
+generics(12)
+generics(true)
 
 
 
